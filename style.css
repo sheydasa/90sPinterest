@@ -1,0 +1,62 @@
+/**Importing Fonts*/
+@font-face {
+    font-family: pixel;
+    src: url(fonts/pixel.otf);
+  }
+
+  @font-face{
+    font-family: code;
+    src: url(fonts/code.ttf)
+  }
+
+.pinGif{
+    width: 10%;
+}
+
+.logo{
+}
+
+.starDivider{
+    width: 100%;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Whiteboard Styles */
+  #whiteboard {
+    width: 600px;
+    height: 400px;
+    background: white;
+    border: 5px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+  
+  .draggable {
+    position: absolute;
+    cursor: grab;
+  }
+  
+  .moodImage {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  html, body {
+    cursor: url("cursors/Cell\ Phone.cur"), default;
+    /* just change the cursor.ico path to your location */
+}
+
