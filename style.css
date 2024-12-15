@@ -1,7 +1,12 @@
-/**Importing Fonts*/
+/**importing fonts*/
 @font-face {
     font-family: pixel;
     src: url(fonts/pixel.otf);
+  }
+
+  @font-face {
+    font-family: comicSans;
+    src: url(fonts/comicsans.ttf);
   }
 
   @font-face{
@@ -9,54 +14,234 @@
     src: url(fonts/code.ttf)
   }
 
-.pinGif{
-    width: 10%;
+/*rainbow effect*/
+@keyframes colorRotate {
+  from {
+    color: #6666ff;
+  }
+  10% {
+    color: #0099ff;
+  }
+  50% {
+    color: #00ff00;
+  }
+  75% {
+    color: #ff3399;
+  }
+  100% {
+    color: #6666ff;
+  }
 }
 
-.logo{
+.body .html{
+  margin: 0;
+  padding: 0;
+}
+
+body { cursor: url('cursor/Cell\ Phone.cur'), auto; }
+
+.heart-section{
+  width: 100%;
+  height: 100%;
+  padding-bottom: 33vh;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  text-align: center; /* Center the text */
+  padding-bottom: 50px;
+  padding-bottom: 20px;
+}
+
+.pinGif{
+    width: 8vw;
 }
 
 .starDivider{
     width: 100%;
-}
-
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  /* Whiteboard Styles */
-  #whiteboard {
-    width: 600px;
-    height: 400px;
-    background: white;
-    border: 5px solid black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
     overflow: hidden;
-  }
-  
-  .draggable {
-    position: absolute;
-    cursor: grab;
-  }
-  
-  .moodImage {
-    width: 100px;
-    height: auto;
-    cursor: pointer;
-  }
-
-  html, body {
-    cursor: url("cursors/Cell\ Phone.cur"), default;
-    /* just change the cursor.ico path to your location */
 }
 
+.introduction h1 {
+  font-family: comicSans;
+  font-size: 40px;
+  color: red;
+}
+
+.introduction p {
+  font-family: comicSans;
+  font-size: 30px;
+  animation: colorRotate 4s linear 0s infinite;
+}
+
+.frames{
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 60% 40%; 
+  grid-template-rows: auto auto;
+  height: 100vh;
+}
+
+/*photo search section*/
+
+.left {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  border-top: 5px solid yellow; 
+}
+
+.top-left{
+  background-image: url(images/galaxy2.gif);
+  padding: 20px;
+  height: 90vh;
+  border-right: 5px solid yellow; 
+  border-left: 5px solid yellow; 
+  border-bottom: 5px solid yellow; 
+}
+
+.top-left{
+  padding: 20px;
+}
+
+.top-left h2{
+  font-family: comicSans;
+  color: #ff3399;
+}
+
+.bottom-left{
+  padding-top: 100px;
+}
+
+/* Container for images */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+/* Style for each image container */
+.png-image {
+    cursor: pointer;
+
+}
+
+.png-image img {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.right{
+  display: grid;
+  grid-template-rows: 50% 50%;
+  border-bottom: 5px solid yellow; 
+  border-top: 5px solid yellow; 
+  border-right: 5px solid yellow; 
+}
+
+/* daily horoscope */
+.top-right {
+  background-image: url(images/clouds.gif);
+  padding: 20px;
+  height: auto;
+}
+
+.horoscope-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.horoscope-content{
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.horoscope-content img {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  display: block;
+}
+
+.horoscope-content p{
+  font-family: comicSans;
+}
+
+.arrows{
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.arrows img{
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Container for the slide */
+.slide {
+  display: none;
+  text-align: center; 
+}
+
+.slide.active{
+  display: block;
+}
+
+/* random feature*/
+.bottom-right {
+  background-image: url(images/giphy.gif);
+  padding: 20px;
+  height: auto;
+  border-top: 5px solid yellow; 
+  border-left: 5px solid yellow; 
+  overflow: hidden;
+}
+
+.bottom-right p{
+  font-family: comicSans;
+  font-size: 30px;
+  color: #ff3399;
+}
+
+.fortune{
+  padding-right: 10%;
+  padding-left: 10%;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  height: 100px;          
+  text-align: center;  
+}
+
+.stamps{
+  display: flex;
+  justify-content: center;  
+  gap: 20px; 
+}
+
+.stamps img {
+  width: 130px;
+  height: auto;
+}

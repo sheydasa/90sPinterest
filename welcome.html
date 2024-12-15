@@ -3,37 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development for Royal Complex</title>
+    <title>90s Pinterest</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </head>
 
-<body background="44.png">
-<section>
-    <div class="navigation">
+<body background="images/44.png">
+
+<section class="heart-section">
+    <!--logo and introduction-->
+    <section class="hero">
         <div class="logo">
-            <img class="pinGif" src="pin.gif">
-            <img src="pinterest.png">
-            <img class="pinGif" src="pin.gif" >
+            <img class="pinGif" src="images/pin.gif">
+            <img src="images/pinterest.png">
+            <img class="pinGif" src="images/pin.gif">
         </div>
-    </div>
 
-    <div class="starDivider">
-        <img src="starDivider.gif">
-    </div>
+        <br><br>
+        <div class="starDivider">
+            <img src="images/starDivider.gif">
+            <img src="images/starDivider.gif">
+            <img src="images/starDivider.gif">
+        </div>
+        
+        <br>
+        <div class="introduction">
+            <img src="images/cuoricinopiccolorosso.gif" style="width: 40px;">
+            <img src="images/welcome.gif">
+            <img src="images/cuoricinopiccolorosso.gif" style="width: 40px;">
+            <p>Let's make a trip back in time and look at Pinterest in the 90s.</p>
+        </div>
 
-    <button id="openWhiteboard">Open Whiteboard</button>
+        <!--
+        <div class="visitor-count">
+            <p>You are visitor number: <span id="visitorCount">Loading...</span></p>
+        </div>
+        -->
+    </section>
 
-    <!-- Whiteboard Container -->
-    <div id="whiteboard" class="hidden">
-    <button id="closeWhiteboard">X</button>
-    </div>
+    <section class="frames">
+        <div class="grid-container">
+            <!--search engine and image grid-->
+            <div class="left">
+                <div class="top-left">
+                    <h2>Some inspo...</h2>
+                    <div class="image-container">
+                        <div class="png-image" draggable="true">
+                            <img src="images/dreamy1.png" alt="PNG 1" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/dreamy2.png" alt="PNG 2" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/grunge3.png" alt="PNG 2" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/dreamy3.png" alt="PNG 2" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/dreamy4.png" alt="PNG 2" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/artsy5.png" alt="PNG 2" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/grunge2.png" alt="PNG 2" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/dreamy5.gif" alt="PNG 2" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/grunge1.png" alt="PNG 2" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/dreamy6.gif" alt="PNG 2" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/dreamy7.gif" alt="PNG 2" class="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- Sample Images -->
-<img src="sweater.jpeg" class="moodImage" alt="Mood Image 1">
-<img src="cake.png" class="moodImage" alt="Mood Image 2">
+            <div class="right">
+                <!--horoscope-->
+                <div class="top-right">
+                    <div class="horoscope-container">
+                        <div class="horoscope-content">
+                            <div class="slide active" id="slide1">
+                                <img src="images/FairyBorder.gif">
+                                <img src="images/aries.gif" alt="Aries logo" style="size: 5px;">
+                                <p>ARIES</p>
+                                <p>Today, take bold steps towards your goals. Opportunities will knock, so be ready!</p>
+                            </div>
+
+                            <div class="slide" id="slide2">
+                                <img src="images/FairyBorder.gif">
+                                <img src="images/taurus.gif" alt="Taurus logo" style="width: 30px;">
+                                <p>TAURUS</p>
+                                <p>Patience is key this month. Nurture relationships, personal and professional.</p>
+                            </div>
+
+                            <div class="slide" id="slide3">
+                                <img src="images/FairyBorder.gif">
+                                <img src="images/gemini.gif" alt="Gemini logo">
+                                <p>GEMINI</p>
+                                <p>Your energy is contagious today, Gemini. Use it to connect with others and share your ideas.</p>
+                            </div>
+
+                            <div class="slide" id="slide4">
+                                <img src="images/FairyBorder.gif">
+                                <img src="images/cancer.gif" alt="Cancer logo">
+                                <p>CANCER</p>
+                                <p>It’s a good day to reflect on your home life. Taking time to nurture your space will bring you peace and comfort.</p>
+                            </div>
+                            
+                            <div class="slide" id="slide5">
+                                <img src="images/FairyBorder.gif">
+                                <img src="images/leo.gif" alt="Leo logo" style="width: 30px;">
+                                <p>LEO</p>
+                                <p>Your creativity is high today. Take advantage of it by starting a new project or engaging in artistic expression.</p>
+                            </div>
+
+                            <div class="slide" id="slide6">
+                                <img src="images/FairyBorder.gif">
+                                <img src="images/virgo.gif" alt="Virgo logo">
+                                <p>VIRGO</p>
+                                <p>Focus on your health today. A small change in your routine could have a big impact on your overall well-being.</p>
+                            </div>
+
+                            <div class="slide" id="slide7">
+                                <img src="images/FairyBorder.gif">
+                                <img src="images/libra.gif" alt="Libra logo">
+                                <p>LIBRA</p>
+                                <p>Today is a good day for socializing. Get out and enjoy the company of friends or meet someone new.</p>
+                            </div>
+
+                            <div class="slide" id="slide8">
+                                <img src="images/FairyBorder.gif">
+                                <img src="images/scorpio.gif" alt="Scorpio logo">
+                                <p>SCORPIO</p>
+                                <p>Take time to relax and recharge today. A bit of solitude will help you clear your mind and regain focus.</p>
+                            </div>
+
+                            <div class="slide" id="slide9">
+                                <img src="images/FairyBorder.gif">
+                                <img src="images/sagittarius.gif" alt="Sagittarius logo">
+                                <p>SAGITTARIUS</p>
+                                <p>Today is perfect for adventure. Step out of your comfort zone and explore something new.</p>
+                            </div>
+
+                            <div class="slide" id="slide10">
+                                <img src="images/FairyBorder.gif">
+                                <img src="images/capricorn.gif" alt="Capricorn logo">
+                                <p>CAPRICORN</p>
+                                <p>Work is calling your name, but don't forget to balance it with some personal time.</p>
+                            </div>
+
+                            <div class="slide" id="slide11">
+                                <img src="images/FairyBorder.gif">
+                                <img src="images/aquarius.gif" alt="Aquarius logo">
+                                <p>AQUARIUS</p>
+                                <p>Your mind is sharp today, Aquarius. Trust your intuition, and it will guide you to solutions you've been seeking.</p>
+                            </div>
+
+                            <div class="slide" id="slide12">
+                                <img src="images/FairyBorder.gif">
+                                <img src="images/pisces.gif" alt="Pisces logo">
+                                <p>PISCES</p>
+                                <p>Today, focus on nurturing your emotional well-being. Spend time doing something that brings you joy and peace.</p>
+                            </div>
+
+                             <!-- Navigation buttons -->
+                             <div class="arrows">
+                                <img src="images/rightArrow.gif" style="transform: scaleX(-1);" onclick="changeSlide(-1)">
+                                <img src="images/rightArrow.gif" onclick="changeSlide(1)">
+                             </div>                            
+                        </div>
+
+                    </div>
+                </div>
+        
+                <!--an artsy mood board-->
+                <div class="bottom-right">
+                    <p>Feeling artsy...?</p>
+                    <div class="image-container">
+                        <div class="png-image" draggable="true">
+                            <img src="images/artsy1.png" alt="PNG 1" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/artsy2.png" alt="PNG 2" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/artsy3.png" alt="PNG 2" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/artsy4.png" alt="PNG 2" class="image">
+                        </div>
+                        <div class="png-image" draggable="true">
+                            <img src="images/artsy5.png" alt="PNG 2" class="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+
+    </section>
 
 </section>
-</body>
 
+<section class="fortune">
+    <div class="fortune-container">
+        <br>
+        <img src="images/speech bubble.gif">
+        <img src="images/8ball.png">
+    </div>    
+</section>
+
+<!--footer and stamps-->
+<section class="footer">
+    <div class="stamps">
+        <img src="images/clueless.gif">
+        <img src="images/foreveronline.gif">
+        <img src="images/goodnight stamp.gif">
+    </div>
+</section>
+</body>
 </html>
