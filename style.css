@@ -48,10 +48,10 @@ body { cursor: url('cursor/Cell\ Phone.cur'), auto; }
 
 .hero{
   display: flex;
-  flex-direction: column; /* Arrange items vertically */
-  justify-content: center; /* Vertically center the content */
-  align-items: center; /* Horizontally center the content */
-  text-align: center; /* Center the text */
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  text-align: center; 
   padding-bottom: 50px;
   padding-bottom: 20px;
 }
@@ -89,8 +89,6 @@ body { cursor: url('cursor/Cell\ Phone.cur'), auto; }
   grid-template-rows: auto auto;
   height: 100vh;
 }
-
-/*photo search section*/
 
 .left {
   display: grid;
@@ -227,6 +225,7 @@ body { cursor: url('cursor/Cell\ Phone.cur'), auto; }
   padding-right: 10%;
   padding-left: 10%;
 }
+
 .footer{
   display: flex;
   justify-content: center;
